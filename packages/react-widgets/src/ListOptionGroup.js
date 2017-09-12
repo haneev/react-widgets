@@ -13,7 +13,7 @@ function ListOptionGroup({ children, className, component = 'li' }) {
   return (
     <Tag
       tabIndex='-1'
-      role="separator"
+      role='presentation'
       className={cn(className, 'rw-list-optgroup')}
     >
       {children}
