@@ -227,7 +227,6 @@ var ComboBox = createReactClass({
         focused ={focusedItem}
         aria-hidden={!open}
         aria-labelledby={instanceId(this)}
-        aria-live={open && 'polite'}
         onSelect={this.handleSelect}
         onMove={this._scrollTo}
         messages={{

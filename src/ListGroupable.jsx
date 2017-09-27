@@ -11,7 +11,7 @@ import { dataText, dataValue } from './util/dataHelpers';
 import { instanceId, notify } from './util/widgetHelpers';
 import { isDisabledItem, isReadOnlyItem }  from './util/interaction';
 
-let optionId = (id, idx)=> `${id}__option__${idx}`;
+let optionId = (id, idx) => `${id}__option__${idx}`;
 
 export default createReactClass({
 
@@ -19,7 +19,7 @@ export default createReactClass({
 
   mixins: [
     require('./mixins/ListMovementMixin'),
-    require('./mixins/AriaDescendantMixin')()
+    require('./mixins/AriaDescendantMixin')(ctx => null)
   ],
 
   propTypes: {
@@ -141,7 +141,7 @@ export default createReactClass({
       <li
         key={'item_' + group}
         tabIndex='-1'
-        role="separator"
+        role="presentation"
         id={id + '_group_' + group}
         className='rw-list-optgroup'
       >
